@@ -69,3 +69,8 @@ void handle_root() {
 ## FUNCIONAMIENTO
 
 Una vez lo tengamos conectado al wifi iniciamos el loop. Dentro llamanos a una función que será la que ejecute el codigo en html.
+
+
+# Practica 3B
+
+## CODIGO
