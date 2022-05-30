@@ -74,3 +74,40 @@ Una vez lo tengamos conectado al wifi iniciamos el loop. Dentro llamanos a una f
 # Practica 3B
 
 ## CODIGO
+```
+#include <Arduino.h>
+#include "BluetoothSerial.h"
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+#endif
+BluetoothSerial SerialBT;
+void setup() {
+  Serial.begin(115200);
+  SerialBT.begin("ESP32test"); //Bluetooth device name
+  Serial.println("The device started, now you can pair it with bluetooth!");
+}
+
+void loop() {
+  if (Serial.available()) {
+    SerialBT.write(Serial.read());
+  }
+  if (SerialBT.available()) {
+    Serial.write(SerialBT.read());
+  }
+  delay(20);
+  }
+```
+
+## FUNCIONAMIENTO
+
+> Libreria necesaria para que funcione el Bluetooth
+```
+#include "BluetoothSerial.h"
+```
+> Habilitamos el Bluetooth
+```
+#if !defined(CONFIG_BT_ENABLED) || !defined(CONFIG_BLUEDROID_ENABLED)
+#error Bluetooth is not enabled! Please run `make menuconfig` to and enable it
+#endif
+```
+Luego el loop se va a encargar de enviar y recibir los datos a traves del BluetoothSerial que hemos inicializado antes (BluetoothSerial SerialBT;).
