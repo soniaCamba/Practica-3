@@ -1,5 +1,7 @@
 # Practica-3
 
+# Practica 3A
+
 ## CODIGO
 ```
 #include <Arduino.h>
@@ -44,7 +46,17 @@ void loop() {
 String HTML = "<!DOCTYPE html>\
 <html>\
 <body>\
-<h1>My Primera Pagina con ESP32 - Station Mode &#128522;</h1>\
+  <h1>TOP 10 RESTAURANTES BARCELONA SEGUN TIMEOUT;</h1>\
+  <li> 1.Lasarte </li>\
+  <li> 2.Gresca </li>\
+  <li> 3.disfrutar </li>\
+  <li> 4.Alkimia </li>\
+  <li> 5.Cocina hermanos Torres </li>\
+  <li> 6.Cinc sentits </li>\
+  <li> 7.Direkte Boqueria</li>\
+  <li> 8.Casa Xica</li>\
+  <li> 9.Hofmann </li>\
+  <li> 10.La Gormanda</li>\
 </body>\
 </html>";
 
@@ -56,4 +68,4 @@ void handle_root() {
 
 ## FUNCIONAMIENTO
 
-Primero de todo lo conectaremos al wifi
+Una vez lo tengamos conectado al wifi iniciamos el loop. Dentro llamanos a una función que será la que ejecute el codigo en html.
