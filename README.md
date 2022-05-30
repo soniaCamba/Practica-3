@@ -1,7 +1,7 @@
 # Practica-3
 
-```
 ## CODIGO
+```
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WebServer.h>
