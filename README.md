@@ -1,5 +1,6 @@
 # Practica-3
 
+```
 ## CODIGO
 #include <Arduino.h>
 #include <WiFi.h>
@@ -51,3 +52,4 @@ String HTML = "<!DOCTYPE html>\
 void handle_root() {
   server.send(200, "text/html", HTML);
 }
+```
