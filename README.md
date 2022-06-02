@@ -2,7 +2,7 @@
 
 # Practica 3A
 
-## CODIGO
+## CÓDIGO
 ```
 #include <Arduino.h>
 #include <WiFi.h>
